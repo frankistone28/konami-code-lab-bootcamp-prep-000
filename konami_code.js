@@ -9,7 +9,7 @@ function init() {
       if (userKeys.length > code.length) {
         userKeys.shift();
       }
-      if (userKeys === code) {
+      if (userKeys.toString() === code.toString()) {
         alert("Hurray");
       }
     });
