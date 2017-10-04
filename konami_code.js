@@ -20,7 +20,7 @@ function init() {
           index = 0;
         }
       }
-      
+
       onKeyDownHandler(e);
     });
 }
