@@ -5,7 +5,7 @@ var index = 0;
 
 function init() {
     body.addEventListener("keydown", function(e){
-      userKeys.push(e.which);
+      userKeys.push(parseInt(e.which));
       if (userKeys.length > code.length) {
         userKeys.shift();
       }
