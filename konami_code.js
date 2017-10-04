@@ -5,13 +5,21 @@ var index = 0;
 
 function init() {
     body.addEventListener("keydown", function(e){
-      userKeys.push(parseInt(e.which));
-      if (userKeys.length > code.length) {
-        userKeys.shift();
-      }
-      if (userKeys.toString() === code.toString()) {
-        alert("Hurray");
-      }
+      function onKeyDownHandler(e) {
+  const key = parseInt(e.detail || e.which);
+ 
+  if (key === alphabet[index]) {
+    index++;
+ 
+    if (index === alphabet.length) {
+      alert("Hurray!");
+ 
+      index = 0;
+    }
+  } else {
+    index = 0;
+  }
+}
     });
 }
 
