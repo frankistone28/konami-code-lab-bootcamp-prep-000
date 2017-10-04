@@ -4,25 +4,7 @@ var body = document.querySelector("body");
 var index = 0;
 
 function init() {
-    body.addEventListener("keydown", function(e){
-      function onKeyDownHandler(e) {
-        const key = parseInt(e.detail || e.which);
-
-        if (key === code[index]) {
-          index++;
-
-          if (index === code.length) {
-            alert("Hurray!");
-
-            index = 0;
-          }
-        } else {
-          index = 0;
-        }
-      }
-
-      onKeyDownHandler(e);
-    });
+    
 }
 
 init();
